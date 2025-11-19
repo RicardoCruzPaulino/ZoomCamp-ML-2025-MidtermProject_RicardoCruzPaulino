@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "9696:9696"
+    restart: unless-stopped
+    # Optional: mount local code for development (uncomment to enable)
+    # volumes:
+    #   - ./:/app

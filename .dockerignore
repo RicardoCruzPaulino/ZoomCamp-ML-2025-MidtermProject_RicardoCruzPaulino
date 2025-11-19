@@ -1,0 +1,12 @@
+.git
+__pycache__
+.venv
+env
+venv
+*.pyc
+*.pyo
+*.pyd
+*.csv
+model.bin
+results_models.csv
+.env
