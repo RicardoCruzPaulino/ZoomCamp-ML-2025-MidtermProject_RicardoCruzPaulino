@@ -27,8 +27,8 @@ Thumbs.db
 # Python artifacts
 *.pyc
 
-# Data and model artifacts (do not track large files)
-*.csv
+# Data and model artifacts (do not track large model/result files)
+# Keep dataset CSVs tracked in the repository; only ignore model artifacts and results.
 model.bin
 results_models.csv
 
