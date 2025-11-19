@@ -85,3 +85,44 @@ Contact
 	- create a `.gitignore` and remove large files from tracking (recommended),
 	- produce a `requirements.txt` from the current environment (already generated), or
 	- add a small `Makefile` / helper scripts for running the API and training.
+
+**Makefile**
+
+This project includes a `Makefile` with convenient targets for building and running the Docker image, training locally, and quick checks.
+
+- `make build` — Build the Docker image (`zoomcamp-ml:latest`).
+- `make compose-up` — Run `docker compose up --build`.
+- `make run` — Run the Docker image and (optionally) mount your local `model.bin` to skip retraining.
+- `make train` — Run `python train.py` locally to produce a real `model.bin`.
+- `make shell` — Open a shell inside the image (project mounted).
+- `make logs` — Follow logs of the `zoomcamp_test` container (if used).
+- `make test` — Quick HTTP check for the `/docs` endpoint (returns HTTP status code).
+- `make clean` — Remove test container and image.
+
+Examples
+
+Build and run with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Build image locally:
+
+```bash
+make build
+```
+
+Run image and mount `model.bin` (skip training):
+
+```bash
+make run
+```
+
+Train locally to create a real `model.bin`:
+
+```bash
+make train
+```
+
+If you want, I can update this README further to include `make` examples that automatically mount volumes for development, or add CI steps to build and smoke-test the container.
