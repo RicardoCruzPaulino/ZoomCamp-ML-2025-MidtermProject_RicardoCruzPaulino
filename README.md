@@ -126,3 +126,8 @@ make train
 ```
 
 If you want, I can update this README further to include `make` examples that automatically mount volumes for development, or add CI steps to build and smoke-test the container.
+
+**Cloud Deployment (GCP)**
+
+Cloud deployment helpers and instructions are in `deploy/README_GCP.md`. That file explains how to use the included helper script `deploy/gcp_deploy.sh` and the `deploy/cloudbuild.yaml` configuration to build and deploy the application to Google Cloud Run (Cloud Build + Cloud Run). See that file for required IAM roles, APIs to enable, and example commands.
+
